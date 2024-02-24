@@ -43,7 +43,7 @@ def main() -> None:
     disproof()
 
     if _k := get_int('Enter exponent k to find other counter example>> '):
-        max = 5
+        max = 133
         p_ints = [1,]
         euler(first_call=True, k=_k, n=_k-1)
 
