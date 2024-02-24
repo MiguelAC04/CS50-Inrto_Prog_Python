@@ -6,21 +6,22 @@ def main() -> None:
     names = {'John': 10.0, 'David': 40, 'Alex': 50}
     str3 = '{John:5.2f} | {David:5.2f} | {Alex:5.2f}, are ages'.format(**names)
     print(str3)
-    
+
     class Person():
         age = 100
         bank = 'Amererican_Express', 'Citibank', 'Capital_One'
         origin = 'China'
-    
+
     str4 = f'{Person.bank[-1]}'
     print(str4)
     str5 = f'{"CENTERED":.^16}'
-    print(str5); 
-    
+    print(str5);
+
     print()
-    
+
     print(f'|{12341:+}{1234: }{-1234: }|')
     print(f'{-0.023:z.1f}')
     print(f'{1000.0001:_}')
     print(f'{bin(516)}')
+    print(f'{12345:3}')
 main()
