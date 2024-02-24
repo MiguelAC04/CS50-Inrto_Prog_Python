@@ -27,4 +27,5 @@ def main() -> None:
     print(f'{100.1234:1}')
     print(f'{555:#x} or {555:#X}\n')
     print(f'{1_234_234.99:e} or {1_234_234.99:E}')
+    print(f'{0.999:%}')
 main()
