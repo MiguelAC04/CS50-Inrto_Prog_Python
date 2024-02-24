@@ -25,5 +25,6 @@ def main() -> None:
     print(f'{bin(516)}')
     print(f'{12345:6}{54321:6} {-101:06}')
     print(f'{100.1234:1}')
-    print(f'{555:#x} or {555:#X}')
+    print(f'{555:#x} or {555:#X}\n')
+    print(f'{1_234_234.99:e} or {1_234_234.99:E}')
 main()
