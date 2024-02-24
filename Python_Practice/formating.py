@@ -23,5 +23,5 @@ def main() -> None:
     print(f'{-0.023:z.1f}')
     print(f'{1000.0001:_}')
     print(f'{bin(516)}')
-    print(f'{12345:6}')
+    print(f'{12345:6}{54321:6}{101:6}')
 main()
