@@ -1,5 +1,5 @@
 from math import pow
-
+import tkinter
 '''
 Este programa busca refutar la conjetura de la suma de Euler,
 que propone que para n y k mayores a 1, si la suma de n-esimos
@@ -9,9 +9,9 @@ Se realizará la demostración mediante el cálculo de un contra
 ejemplo para algún k menor a 6, dónde para un n menor a k se
 cumple la igualdad.
 '''
-
+tkinter.
 def main() -> None:
-    
+
     def euler(first_call:bool, k=1, n=1) -> None:
         '''Get all the possible combinations of 2 to k-1
 
