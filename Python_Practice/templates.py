@@ -13,5 +13,5 @@ def main() ->  None:
     print(templ_2.safe_substitute())
     print(templ_2.template)
 
-
-main()
+if __name__ == "__main__":
+    main()
