@@ -40,7 +40,7 @@ def main() -> None:
 
     global counter_ex
     counter_ex = list()
-    disproof()
+    # disproof()
 
     if _k := get_int('Enter exponent k to find other counter example>> '):
         max = 133
