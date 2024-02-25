@@ -14,9 +14,9 @@ cumple la igualdad.
 def main() -> None:
 
     def euler(first_call:bool, k=1, n=1) -> None:
-        '''Get all the possible combinations of numbers
+        '''Get all the possible combinations of 2 to k-1
 
-        between 1 and 'max'.
+        numbers between 1 and 'max'.
         '''
         i = n-1
         if n == 1:
