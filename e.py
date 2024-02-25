@@ -47,6 +47,7 @@ def main() -> None:
         p_ints = [1,]
         euler(first_call=True, k=_k, n=_k-1)
     else:
+         
          a = b = c = d = 0
          for _ in range(26, 133):
               a +=1
