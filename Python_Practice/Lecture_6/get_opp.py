@@ -15,8 +15,8 @@ def check_decimal(num):
     return num.replace('.', '', 1).isdigit()
 
 
-def check_values(action, operator):
-    values = [action.split(op) for op in operator]
+def check_values(action: str, operator: list[str]) -> bool:
+    values = [action.split for op in operator]
     print(values)
     return
     for valid_n in map(check_decimal, values):
