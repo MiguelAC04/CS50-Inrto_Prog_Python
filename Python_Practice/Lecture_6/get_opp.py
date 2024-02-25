@@ -16,10 +16,10 @@ def check_decimal(num):
 
 
 def check_values(action, operator):
-    values = action.split(operator)
-    if x:=map(check_decimal, values):
+    values = action.split(operator[0])
+    if x:=list(map(check_decimal, values)):
         pass
-    print(x)
+    print(x[0])
     # return values.replace('.', 1)
 if __name__ == "__main__":
     main()
