@@ -1,5 +1,5 @@
 from math import pow
-import tkinter
+
 '''
 Este programa busca refutar la conjetura de la suma de Euler,
 que propone que para n y k mayores a 1, si la suma de n-esimos
