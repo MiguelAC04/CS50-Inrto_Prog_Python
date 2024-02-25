@@ -2,10 +2,13 @@ def main() -> None:
     operation = input('Opperation>> ')
     operators = ('+', '-', '*', '/')
     op_parts = operation.split()
+
     intersection = lambda l1, l2: list(set(l1).intersection(l2))
+
     for part in op_parts:
         if (op := intersection(part, operators)):
             check_values(part, op)
+        print(op)
 
 
 def check_decimal(num):
