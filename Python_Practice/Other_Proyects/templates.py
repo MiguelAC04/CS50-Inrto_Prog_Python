@@ -11,7 +11,7 @@ def main() ->  None:
     print(templ_1.substitute(mapp, person='He', years=13))
     templ_2 = Template('$Person plays $piano')
     print(templ_2.safe_substitute())
-    print(templ_2.substitute())
+    print(templ_2.substitute(Person =  '$'))
 
 
 main()
