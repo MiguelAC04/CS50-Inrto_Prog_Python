@@ -1,5 +1,5 @@
 from math import pow
-
+import math
 '''
 Este programa busca refutar la conjetura de la suma de Euler,
 que propone que para n y k mayores a 1, si la suma de n-esimos
@@ -9,6 +9,7 @@ Se realizará la demostración mediante el cálculo de un contra
 ejemplo para algún k menor a 6, dónde para un n menor a k se
 cumple la igualdad.
 '''
+
 
 
 def main() -> None:
@@ -47,7 +48,7 @@ def main() -> None:
         p_ints = [1,]
         euler(first_call=True, k=_k, n=_k-1)
     else:
-         
+
          a = b = c = d = 0
          for _ in range(26, 133):
               a +=1
