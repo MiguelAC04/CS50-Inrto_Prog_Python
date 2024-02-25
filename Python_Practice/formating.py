@@ -15,7 +15,7 @@ def main() -> None:
     str4 = f'{Person.bank[-1]}'
     print(str4)
     str5 = f'{"CENTERED":.^16}'
-    print(str5);
+    print(str5)
 
     print()
 
