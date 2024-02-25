@@ -1,3 +1,6 @@
 def main() -> None:
-    opperation = input('Opperation>> ')
-     
+    operation = input('Opperation>> ')
+    operators = ('+', '-', '*', '/')
+    op_parts = opperation.split()
+    for part in op_parts:
+        if 
