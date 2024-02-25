@@ -21,7 +21,7 @@ def main() -> None:
         i = n-1
         if n == 1:
             if len(p_ints) > 1:
-                for _ in range(p_ints[n]+, max+1):
+                for _ in range(p_ints[n], max+1):
                     check_Euler(k, p_ints)
                     p_ints[0]+=1
             return
@@ -70,7 +70,8 @@ def check_Euler(k: int, p_ints:list) -> None:
         result = pow(sum_ints, (1/k))
         if int(result) == round(result, 10):
             counter_ex.append({f'Exponent: {k}':f'{p_ints} -> {int(result)}'})
-            exit('Terminated: '+ p_ints + result)
+            print('Terminated: ', p_ints, result)
+            exit()
         print(p_ints, result)
 
 
