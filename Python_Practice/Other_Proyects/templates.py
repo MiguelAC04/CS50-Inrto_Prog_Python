@@ -9,4 +9,5 @@ def main() ->  None:
     templ_1 = Template('$person is $years old')
     templ_1.substitute(person='I', years=13)
     print(templ_1)
+
 main()
