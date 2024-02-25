@@ -3,4 +3,5 @@ def main() -> None:
     operators = ('+', '-', '*', '/')
     op_parts = opperation.split()
     for part in op_parts:
-        if 
+        focus = list(set(op_parts).)
+        if
