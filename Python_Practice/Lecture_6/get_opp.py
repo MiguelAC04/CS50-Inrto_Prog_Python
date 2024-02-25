@@ -16,7 +16,9 @@ def check_decimal(num):
 
 
 def check_values(action, operator):
-    values = action.split(operator[0])
+    values = [action.split(op) for op in operator]
+    print(values)
+    return
     for valid_n in map(check_decimal, values):
         if not valid_n:
             return
