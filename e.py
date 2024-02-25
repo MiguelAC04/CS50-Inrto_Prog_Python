@@ -48,7 +48,10 @@ def main() -> None:
         euler(first_call=True, k=_k, n=_k-1)
     else:
 
-         a = b = c = d = 0
+         a = 26
+         b = 83
+         c = 109
+         d = 0
          for _ in range(26, 133):
               a +=1
               for _ in range(83, 133):
