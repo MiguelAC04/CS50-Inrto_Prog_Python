@@ -17,7 +17,7 @@ def check_decimal(num):
 
 def check_values(action, operator):
     values = action.split(operator[0])
-    for x in list(map(check_decimal, values)):
+    for x in map(check_decimal, values):
         print(x)
 
     # if x:=):
