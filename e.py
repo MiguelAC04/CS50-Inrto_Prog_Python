@@ -10,10 +10,11 @@ ejemplo para algún k menor a 6, dónde para un n menor a k se
 cumple la igualdad.
 '''
 
+
 def main() -> None:
     '''Main Function'''
-    
-    def euler(first_call:bool, k=1, n=1) -> None:
+
+    def euler(first_call: bool, k=1, n=1) -> None:
         '''Get all the possible combinations of 2 to k-1
 
         numbers between 1 and 'max'.
@@ -23,7 +24,7 @@ def main() -> None:
             if len(p_ints) > 1:
                 for _ in range(p_ints[n], max+1):
                     check_Euler(k, p_ints)
-                    p_ints[0]+=1
+                    p_ints[0] += 1
             return
         elif first_call:
             euler(first_call=True, k=k, n=i)
@@ -32,7 +33,7 @@ def main() -> None:
 
         for _ in range(max):
             euler(first_call=False, k=k, n=i)
-            p_ints[i]+=1
+            p_ints[i] += 1
             p_ints[:i] = [p_ints[i]] * i
 
     def disproof(k=4):
@@ -48,25 +49,24 @@ def main() -> None:
         euler(first_call=True, k=_k, n=_k-1)
 
 
-def check_Euler(k: int, p_ints:list) -> None:
-        '''Tests for the given exponent k if the coonjecture
+def check_Euler(k: int, p_ints: list) -> None:
+    '''Tests for the given exponent k if the coonjecture
 
-        stands with the n<k numbers in the 'p_ints' list.
-        '''
-        sum_ints = sum(map(lambda a_n:pow(a_n,k), p_ints))
-        result = pow(sum_ints, (1/k))
-        if (x:=int(result)) == (y:=round(result, 10)):
-            counter_ex.append({f'Exponent: {k}':f'{p_ints} -> {int(result)}'})
-        print(p_ints, result)
+    stands with the n<k numbers in the 'p_ints' list.
+    '''
+    sum_ints = sum(map(lambda a_n: pow(a_n, k), p_ints))
+    result = pow(sum_ints, (1/k))
+    if (x := int(result)) == (y := round(result, 10)):
+        counter_ex.append({f'Exponent: {k}': f'{p_ints} -> {int(result)}'})
+    print(p_ints, result)
 
 
 def get_int(prompt: str) -> int:
-        n = input(prompt)
-        if n.isdigit():
-            return int(n)
+    n = input(prompt)
+    if n.isdigit():
+        return int(n)
 
 
 if __name__ == "__main__":
     main()
     [print(example) for example in counter_ex]
-
