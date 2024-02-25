@@ -1,7 +1,12 @@
-class Template(Template):
-    def __init__(self):
-        
+from string import Template
+
+'''
+This code plays with some important capabilities
+of the Template sting class
+'''
 
 def main() ->  None:
-    pass
+    templ_1 = Template('$person is $years old')
+    templ_1.substitute(person='I', years=13)
+    print(templ_1)
 main()
