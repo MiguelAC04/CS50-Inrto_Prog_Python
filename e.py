@@ -9,7 +9,7 @@ Se realizará la demostración mediante el cálculo de un contra
 ejemplo para algún k menor a 6, dónde para un n menor a k se
 cumple la igualdad.
 '''
-
+math.
 
 
 def main() -> None:
