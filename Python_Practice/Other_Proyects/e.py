@@ -50,7 +50,7 @@ def main() -> None:
 
 
 def check_Euler(k: int, p_ints: list) -> None:
-    '''Tests for the given exponent k if the coonjecture
+    '''Tests for the given exponent k if the conjecture
 
     stands with the n<k numbers in the 'p_ints' list.
     '''
