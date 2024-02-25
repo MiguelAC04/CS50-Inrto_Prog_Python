@@ -11,7 +11,8 @@ cumple la igualdad.
 '''
 
 def main() -> None:
-
+    '''Main Function'''
+    
     def euler(first_call:bool, k=1, n=1) -> None:
         '''Get all the possible combinations of 2 to k-1
 
