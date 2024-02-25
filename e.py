@@ -40,29 +40,12 @@ def main() -> None:
 
     global counter_ex
     counter_ex = list()
-    # disproof()
+    disproof()
 
     if _k := get_int('Enter exponent k to find other counter example>> '):
         max = 133
         p_ints = [1,]
         euler(first_call=True, k=_k, n=_k-1)
-    else:
-
-         a = 26
-         b = 83
-         c = 109
-         d = 132
-         for _ in range(26, 133):
-              a +=1
-              for _ in range(83, 133):
-                   b += 1
-                   for _ in range(109, 133):
-                        c += 1
-                        for _ in range(133):
-                             d += 1
-                             check_Euler(4, (a,b,c,d))
-
-
 
 
 def check_Euler(k: int, p_ints:list) -> None:
@@ -74,8 +57,6 @@ def check_Euler(k: int, p_ints:list) -> None:
         result = pow(sum_ints, (1/k))
         if (x:=int(result)) == (y:=round(result, 10)):
             counter_ex.append({f'Exponent: {k}':f'{p_ints} -> {int(result)}'})
-            print('Terminated: ', p_ints, result)
-            exit()
         print(p_ints, result)
 
 
