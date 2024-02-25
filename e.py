@@ -72,7 +72,7 @@ def check_Euler(k: int, p_ints:list) -> None:
         '''
         sum_ints = sum(map(lambda a_n:pow(a_n,k), p_ints))
         result = pow(sum_ints, (1/k))
-        if int(result) == round(result, 10):
+        if (x:=int(result)) == (y:=round(result, 10)):
             counter_ex.append({f'Exponent: {k}':f'{p_ints} -> {int(result)}'})
             print('Terminated: ', p_ints, result)
             exit()
