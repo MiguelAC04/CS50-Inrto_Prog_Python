@@ -19,7 +19,6 @@ def check_values(action: str, operator: list[str]) -> bool:
     values = list()
     for op in operator:
         values.append(action.split(op))
-    values.append(action.split(op) for op in operator)
     print(values)
     return
     for valid_n in map(check_decimal, values):
