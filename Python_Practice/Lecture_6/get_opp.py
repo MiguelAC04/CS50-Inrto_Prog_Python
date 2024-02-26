@@ -16,7 +16,7 @@ def check_decimal(num):
 
 
 def check_values(action: str, operator: list[str]) -> bool:
-    def get_nums( ) -> list[str]:
+    def get_nums() -> list[str]:
         if operator not in action:
             return
     values = list()
