@@ -5,8 +5,11 @@ def main() -> None:
     intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
     if (op := intersection(operation, operators)):
-        if valid_values(operation, op):
-            evaluate(operation)
+        if operation[-1] not in operators:
+            if valid_values(operation, op):
+                evaluate(operation)
+        else:
+            exit('Missing value after operation')
     else:
         exit('Not a operation')
 
@@ -27,7 +30,7 @@ def check_decimal(num: str) -> bool:
             if int_part > 3:
                 i = 0
                 for _ in int_part.count(','):
-                    if not (j := int_part.find(',', i))%3:
+                    if not (j := int_part.find(',', i)) % 3:
                         return False
                     i = j + 1
             return int_part.isdigit() and decimal_part.isdigit()
@@ -50,7 +53,8 @@ def valid_values(action: str, operator: list[str]) -> bool:
         if not valid_n:
             print('Non valid:', values[i])
             return False
-    else: return True
+    else:
+        return True
 
 
 if __name__ == "__main__":
