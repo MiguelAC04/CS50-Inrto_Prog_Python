@@ -9,6 +9,7 @@ def main() -> None:
     for part in op_parts:
         if (op := intersection(part, operators)):
             valid_values(part, op)
+
         print(set(part))
 
 
