@@ -66,5 +66,6 @@ def valid_values(action: str, operator: list[str]) -> bool:
 
 
 if __name__ == "__main__":
-    operation, result = main()
-    print(operation+' =', result)
+    match main():
+        case [operation, result]:
+            print(operation+' =', result)
