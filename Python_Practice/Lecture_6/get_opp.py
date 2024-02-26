@@ -20,9 +20,10 @@ def check_values(action: str, operator: list[str]) -> bool:
         action = ' '.join(action.split(op))
     values = action.split()
     for valid_n in map(check_decimal, values):
-        if not valid_n:s
+        if not valid_n:
+            print('Non valid:', )
             return
-    print(eval('43xe'))
+    print(values)
 
 
 if __name__ == "__main__":
