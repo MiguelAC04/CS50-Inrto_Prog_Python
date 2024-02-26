@@ -13,8 +13,6 @@ def main(focus_oper: str | None = None) -> None:
     operation = input('Opperation>> ') if not focus_oper else focus_oper
     operators = ('+', '-', '*', '/', 'x')
 
-    intersection = lambda L1, L2: list(set(L1).intersection(L2))
-
     if (oper := intersection(operation, operators)):
         if operation[-1] not in operators:
             if valid_values(operation, oper):
@@ -23,6 +21,9 @@ def main(focus_oper: str | None = None) -> None:
             exit('Missing value after operation')
     else:
         exit('Not a operation')
+
+
+intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
 
 def evaluate(operation: str) -> int | float:
