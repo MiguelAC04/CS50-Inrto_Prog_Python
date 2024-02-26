@@ -1,9 +1,10 @@
 def main() -> None:
     operation = input('Opperation>> ')
+    global operators
     operators = ('+', '-', '*', '/', 'x')
     op_parts = operation.split()
 
-    intersection = lambda l1, l2: list(set(l1).intersection(l2))
+    intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
     for part in op_parts:
         if (op := intersection(part, operators)):
@@ -16,7 +17,7 @@ def check_decimal(num):
 
 
 def get_values(action: list[str], operators: list[str]) -> list[str]:
-    for op in operator:
+    for op in operators:
         action = ' '.join(action.split(op))
     return action.split()
 
