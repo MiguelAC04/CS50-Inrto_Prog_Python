@@ -25,7 +25,7 @@ def main(focus_oper: str | None = None) -> None:
         exit('Not a operation')
 
 
-def evaluate(operation: str) -> None:
+def evaluate(operation: str) -> int | float:
     '''Performs the given operaiton'''
     prep_op = operation.replace(',', '').replace('x', '*')
     print(operation+' =', result := eval(prep_op))
