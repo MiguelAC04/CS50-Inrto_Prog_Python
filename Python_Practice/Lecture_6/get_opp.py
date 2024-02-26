@@ -14,12 +14,14 @@ def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
     match num.split('.', 1):
         case int_part, decimal_part:
-            if int_part < 3:
-                return int_part.isdigit() and decimal_part.isdigit()
-            else:
+            if int_part > 3:
                 i = 0
                 for _ in int_part.count(','):
-                    if
+                    if not (j := int_part.find(',', i))%3:
+                        return False
+                    i = j + 1
+            return int_part.isdigit() and decimal_part.isdigit()
+
 
 
 
