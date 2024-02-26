@@ -7,7 +7,7 @@ def main() -> None:
 
     for part in op_parts:
         if (op := intersection(part, operators)):
-            check_values(part, op)
+            valid_values(part, op)
         print(set(part))
 
 
@@ -15,15 +15,20 @@ def check_decimal(num):
     return num.replace('.', '', 1).isdigit()
 
 
-def check_values(action: str, operator: list[str]) -> bool:
+def get_values(action: list[str], operators: list[str]) -> list[str]:
     for op in operator:
         action = ' '.join(action.split(op))
-    values = action.split()
-    for valid_n in map(check_decimal, values):
+    return action.split()
+
+
+def valid_values(action: str, operator: list[str]) -> bool:
+    values = get_values(action, operator)
+
+    for i, valid_n in enumerate(map(check_decimal, values)):
         if not valid_n:
-            print('Non valid:', )
-            return
-    print(values)
+            print('Non valid:', values[i])
+            return False
+    else: return True
 
 
 if __name__ == "__main__":
