@@ -12,9 +12,12 @@ def main() -> None:
 
 
 def evaluate(operation: str) -> None:
+    '''Performs the given operaiton'''
     try:
-        eval('123*1a')
-        
+        print(operation+'=', eval(operation.replace(',', '')))
+    except SyntaxError:
+        exit('Not valid syntax')
+
 
 def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
@@ -32,12 +35,14 @@ def check_decimal(num: str) -> bool:
 
 
 def get_values(action: str, operators: list[str]) -> list[str]:
+    '''Gets the numerical values present in an operation'''
     for op in operators:
         action = ' '.join(action.split(op))
     return action.split()
 
 
 def valid_values(action: str, operator: list[str]) -> bool:
+    '''Checks whether the numeric values in an operation are valid'''
     values = get_values(action, operator)
 
     for i, valid_n in enumerate(map(check_decimal, values)):
