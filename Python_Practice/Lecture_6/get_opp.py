@@ -12,9 +12,13 @@ def main() -> None:
 
 def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
+    match num.split('.', 1):
+        case int_part, decimal_part:
+            if int_part < 3:
+                return num.replace('.', '', 1).isdigit()
+    else:
     int_part, decimal_part = num.split('.', 1)
-    if int_part < 3:
-        return num.replace('.', '', 1).isdigit()
+
 
 
 
