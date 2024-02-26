@@ -5,10 +5,16 @@ def main() -> None:
     intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
     if (op := intersection(operation, operators)):
-        valid_values(operation, op)
+        if valid_values(operation, op):
+            evaluate(operation)
     else:
         exit('Not a operation')
 
+
+def evaluate(operation: str) -> None:
+    try:
+        eval('123*1a')
+        
 
 def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
@@ -21,8 +27,8 @@ def check_decimal(num: str) -> bool:
                         return False
                     i = j + 1
             return int_part.isdigit() and decimal_part.isdigit()
-
-
+        case decimal:
+            return decimal.isdigit()
 
 
 def get_values(action: str, operators: list[str]) -> list[str]:
