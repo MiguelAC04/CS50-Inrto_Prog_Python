@@ -14,7 +14,8 @@ def main(focus_oper: str | None = None) -> None:
     operators = ('+', '-', '*', '/', 'x')
 
     if (oper := intersection(operation, operators)):
-        if operation[-1] not in operators:
+        if operation[-1] not in operators
+           and :
             if valid_values(operation, oper):
                 return operation, evaluate(operation)
         else:
