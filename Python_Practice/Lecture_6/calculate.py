@@ -9,8 +9,8 @@ except SyntaxError as err:
 '''
 
 
-def main() -> None:
-    operation = input('Opperation>> ')
+def main(operation: str | None = None) -> None:
+    operation = input('Opperation>> ') if not operation else None
     operators = ('+', '-', '*', '/', 'x')
 
     intersection = lambda L1, L2: list(set(L1).intersection(L2))
