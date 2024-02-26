@@ -18,7 +18,7 @@ def main(focus_oper: str | None = None) -> None:
     if (oper := intersection(operation, operators)):
         if operation[-1] not in operators:
             if valid_values(operation, oper):
-                return evaluate(operation)
+                return operation, evaluate(operation)
         else:
             exit('Missing value after operation')
     else:
@@ -28,8 +28,7 @@ def main(focus_oper: str | None = None) -> None:
 def evaluate(operation: str) -> int | float:
     '''Performs the given operaiton'''
     prep_op = operation.replace(',', '').replace('x', '*')
-    print(operation+' =', result := eval(prep_op))
-    return result
+    return eval(prep_op)
 
 
 def check_decimal(num: str) -> bool:
@@ -67,4 +66,5 @@ def valid_values(action: str, operator: list[str]) -> bool:
 
 
 if __name__ == "__main__":
-    main()
+    operation, result = main()
+    print(operation+' =', result)
