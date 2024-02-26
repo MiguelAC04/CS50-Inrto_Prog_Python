@@ -1,20 +1,22 @@
 def main() -> None:
     operation = input('Opperation>> ')
-    global operators
     operators = ('+', '-', '*', '/', 'x')
-    op_parts = operation.split()
 
     intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
-    for part in op_parts:
-        if (op := intersection(part, operators)):
-            valid_values(part, op)
+    if (op := intersection(operation, operators)):
+        valid_values(operation, op)
+    else:
+        exit('Not a operation')
 
-        print(set(part))
+
+def check_decimal(num: str) -> bool:
+    '''Checks whether numbers with decimal point or commas are valid'''
+    int_part, decimal_part = num.split('.', 1)
+    if int_part < 3:
+        return num.replace('.', '', 1).isdigit()
 
 
-def check_decimal(num):
-    return num.replace('.', '', 1).replace(',', '').replace(',', '').isdigit()
 
 
 def get_values(action: str, operators: list[str]) -> list[str]:
