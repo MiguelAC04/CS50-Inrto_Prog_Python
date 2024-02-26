@@ -15,14 +15,11 @@ def check_decimal(num: str) -> bool:
     match num.split('.', 1):
         case int_part, decimal_part:
             if int_part < 3:
-                return num.replace('.', '', 1).isdigit()
+                return int_part.isdigit() and decimal_part.isdigit()
             else:
-                for i in int_part.count(','):
-                    
-    else:
-    int_part, decimal_part = num.split('.', 1)
-
-
+                i = 0
+                for _ in int_part.count(','):
+                    if
 
 
 
