@@ -17,7 +17,7 @@ def check_decimal(num):
     return num.replace('.', '', 1).replace(',', '').replace(',', '').isdigit()
 
 
-def get_values(action: list[str], operators: list[str]) -> list[str]:
+def get_values(action: str, operators: list[str]) -> list[str]:
     for op in operators:
         action = ' '.join(action.split(op))
     return action.split()
