@@ -14,7 +14,7 @@ def main() -> None:
 
 
 def check_decimal(num):
-    return num.replace('.', '', 1).isdigit()
+    return num.replace('.', '', 1).replace(',', '').replace(',', '').isdigit()
 
 
 def get_values(action: list[str], operators: list[str]) -> list[str]:
