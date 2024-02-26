@@ -16,6 +16,9 @@ def check_decimal(num):
 
 
 def check_values(action: str, operator: list[str]) -> bool:
+    def get_nums( ) -> list[str]:
+        if operator not in action:
+            return
     values = list()
     for op in operator:
         values.append(action.split(op))
@@ -25,9 +28,7 @@ def check_values(action: str, operator: list[str]) -> bool:
         if not valid_n:
             return
     print(eval('43xe'))
-    # if x:=):
-    #     pass
-    # print(x[0])
-    # return values.replace('.', 1)
+
+
 if __name__ == "__main__":
     main()
