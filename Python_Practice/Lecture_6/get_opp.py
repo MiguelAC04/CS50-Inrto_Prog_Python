@@ -1,6 +1,6 @@
 def main() -> None:
     operation = input('Opperation>> ')
-
+    operators = ('+', '-', '*', '/', 'x')
     op_parts = operation.split()
 
     intersection = lambda l1, l2: list(set(l1).intersection(l2))
