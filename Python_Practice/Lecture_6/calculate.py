@@ -1,3 +1,14 @@
+'''
+This program allows the user to prompt for an operation
+in the terminal, and get the value.
+Simply, it the same as:
+try:
+    eval(operation)
+except SyntaxError as err:
+    exit(err)
+'''
+
+
 def main() -> None:
     operation = input('Opperation>> ')
     operators = ('+', '-', '*', '/', 'x')
@@ -17,10 +28,8 @@ def main() -> None:
 def evaluate(operation: str) -> None:
     '''Performs the given operaiton'''
     prep_op = operation.replace(',', '').replace('x', '*')
-    try:
-        print(operation+' =', eval(prep_op))
-    except SyntaxError:
-        exit('Not valid syntax')
+    print(operation+' =', eval(prep_op))
+
 
 
 def check_decimal(num: str) -> bool:
