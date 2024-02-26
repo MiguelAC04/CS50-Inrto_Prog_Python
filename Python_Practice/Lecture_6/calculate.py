@@ -9,15 +9,15 @@ except SyntaxError as err:
 '''
 
 
-def main(operation: str | None = None) -> None:
-    operation = input('Opperation>> ') if not operation else None
+def main(focus_oper: str | None = None) -> None:
+    operation = input('Opperation>> ') if not focus_oper else focus_oper
     operators = ('+', '-', '*', '/', 'x')
 
     intersection = lambda L1, L2: list(set(L1).intersection(L2))
 
-    if (op := intersection(operation, operators)):
+    if (oper := intersection(operation, operators)):
         if operation[-1] not in operators:
-            if valid_values(operation, op):
+            if valid_values(operation, oper):
                 evaluate(operation)
         else:
             exit('Missing value after operation')
@@ -49,8 +49,8 @@ def check_decimal(num: str) -> bool:
 
 def get_values(action: str, operators: list[str]) -> list[str]:
     '''Gets the numerical values present in an operation'''
-    for op in operators:
-        action = ' '.join(action.split(op))
+    for oper in operators:
+        action = ' '.join(action.split(oper))
     return action.split()
 
 
