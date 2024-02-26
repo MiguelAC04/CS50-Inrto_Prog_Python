@@ -13,8 +13,9 @@ def main() -> None:
 
 def evaluate(operation: str) -> None:
     '''Performs the given operaiton'''
+    prep_op = operation.replace(',', '').replace('x', '*')
     try:
-        print(operation+'=', eval(operation.replace(',', '')))
+        print(operation+' =', eval(prep_op))
     except SyntaxError:
         exit('Not valid syntax')
 
@@ -22,7 +23,7 @@ def evaluate(operation: str) -> None:
 def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
     match num.split('.', 1):
-        case int_part, decimal_part:
+        case [int_part, decimal_part]:
             if int_part > 3:
                 i = 0
                 for _ in int_part.count(','):
@@ -30,7 +31,7 @@ def check_decimal(num: str) -> bool:
                         return False
                     i = j + 1
             return int_part.isdigit() and decimal_part.isdigit()
-        case decimal:
+        case [decimal]:
             return decimal.isdigit()
 
 
