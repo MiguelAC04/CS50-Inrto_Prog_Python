@@ -16,6 +16,9 @@ def check_decimal(num: str) -> bool:
         case int_part, decimal_part:
             if int_part < 3:
                 return num.replace('.', '', 1).isdigit()
+            else:
+                for i in int_part.count(','):
+                    
     else:
     int_part, decimal_part = num.split('.', 1)
 
