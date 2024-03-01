@@ -1,16 +1,3 @@
-n=2+2
-if n == 4:
-    ....
-
-
-
-
-
-
-
-
-
-
 '''
 This program allows the user to prompt for an operation
 in the terminal, and get the value.
