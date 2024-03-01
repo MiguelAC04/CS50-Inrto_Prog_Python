@@ -21,7 +21,7 @@ def main(focus_oper: str = None) -> list[str, int] | None:
         else:
             exit('Missing value after operation')
     else:
-        raise ValueError
+        raise SyntaxError
 
 
 intersection = lambda L1, L2: list(set(L1).intersection(L2))

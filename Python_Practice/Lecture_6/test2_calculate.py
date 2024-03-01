@@ -19,7 +19,7 @@ def test_exception():
         else:
             return False, 'No error raised'
 
-    test, msg = raises(SyntaxError, calc_expr, 'Not a numerical expression')
+    test, msg = raises(SyntaxError, calc_expr, '90¨¨30__12')
     assert test, msg
 
 
