@@ -6,7 +6,7 @@ print(oper_1, res_1 := eval(oper_1.replace('x', '*')))
 
 
 def test_values():
-    assert res_1+1 == (r:=calc_expr(oper_1))[1], f'{res_1} not = to {r}'
+    assert res_1+1 == (r:=calc_expr(oper_1))[1], f'{res_1} not equal to {r}'
 
 def test_exception():
     def raises(expected_err, func, *args):
@@ -15,7 +15,7 @@ def test_exception():
         except expected_err:
             return True, 'Succesful raise'
         except Exception:
-            return False, 'Unexpected Erro'
+            return False, 'Unexpected Error'
         else:
             return False, 'No error raised'
 
