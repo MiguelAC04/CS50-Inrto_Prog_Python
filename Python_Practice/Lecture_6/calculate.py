@@ -17,6 +17,8 @@ def main(focus_oper: str = None) -> list[str, int] | None:
         if operation[-1] not in operators:
             if valid_values(operation, oper):
                 return operation, evaluate(operation)
+            else:
+                raise ValueError('Invalid values for operation')
         else:
             exit('Missing value after operation')
     else:
