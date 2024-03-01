@@ -18,6 +18,7 @@ def main() -> None:
                 func(args)
             except err:
                 print('Error raised succesfuly')
+                return True
             except Exception:
                 return False
 
