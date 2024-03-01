@@ -41,6 +41,6 @@ def raises(expected_err, func, *args):
         try:
             func(*args)
         except Exception:
-            return False
-        else:
             raise AssertionError
+        else:
+            return True
