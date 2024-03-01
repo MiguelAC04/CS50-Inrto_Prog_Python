@@ -17,7 +17,9 @@ def main() -> None:
             try:
                 func(args)
             except err:
-                raise SyntaxError.add_note('The operation does not raise a SytanxEror')
+                print('Error raised succesfuly')
+            else:
+                raise AssertionError
 
 
         try:
