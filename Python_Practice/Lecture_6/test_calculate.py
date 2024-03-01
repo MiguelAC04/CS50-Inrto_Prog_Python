@@ -20,12 +20,12 @@ def main() -> None:
             except err:
                 print('Error raised succesfuly')
             except Exception:
-                raise AssertionError
+                return False
 
         try:
-            assert_raises(SyntaxError, calc_expr, 'NOT AN OPERATION')
+            assert assert_raises(SyntaxError, calc_expr, 'NOT AN OPERATION')
         except AssertionError as syn_err:
-            print('No SyntaxError raised')
+            print('No SyntaxError raised:', syn_err)
 
     value_test()
     exception_test()
