@@ -17,7 +17,7 @@ def main() -> None:
             try:
                 func(args)
             except err:
-                raise SyntaxError.
+                raise SyntaxError.add_note('The operation does not raise a SytanxEror')
 
 
         try:
