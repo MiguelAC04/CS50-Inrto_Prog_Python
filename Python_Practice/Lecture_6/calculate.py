@@ -9,7 +9,7 @@ except SyntaxError as err:
 '''
 
 
-def main(focus_oper: str | None = None) -> str, int | None:
+def main(focus_oper: str | None = None) -> list[str, int] | None:
     operation = input('Opperation>> ') if not focus_oper else focus_oper
     operators = ('+', '-', '*', '/', 'x')
 
