@@ -8,7 +8,6 @@ except SyntaxError as err:
     exit(err)
 '''
 
-
 def main(focus_oper: str = None) -> list[str, int] | None:
     '''Main method that construct the process of evaluating an expression'''
     operation = input('Opperation>> ') if not focus_oper else focus_oper
@@ -21,7 +20,7 @@ def main(focus_oper: str = None) -> list[str, int] | None:
         else:
             exit('Missing value after operation')
     else:
-        raise SyntaxError
+        raise SyntaxError('No operator present')
 
 
 intersection = lambda L1, L2: list(set(L1).intersection(L2))
