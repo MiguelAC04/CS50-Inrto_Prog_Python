@@ -13,20 +13,20 @@ def main() -> None:
             raise
 
     def exception_test() -> None:
+
         def assert_raises(err, func, *args) -> None:
             try:
                 func(args)
             except err:
                 print('Error raised succesfuly')
-            else:
+            except Exception:
                 raise AssertionError
 
-
         try:
-            assert_raises(SyntaxError, calc_expr, 'NOT AN OPERATION'),
-            'Does not raise SyntaxError when invalid syntax is recieved'
+            assert_raises(SyntaxError, calc_expr, 'NOT AN OPERATION')
         except AssertionError as syn_err:
-            print(syn_err)
+            print('No SyntaxError raised')
+
     value_test()
     exception_test()
 

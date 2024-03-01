@@ -23,7 +23,7 @@ def main(
         else:
             exit('Missing value after operation')
     else:
-        raise SyntaxError
+        raise ValueError
 
 
 intersection = lambda L1, L2: list(set(L1).intersection(L2))
