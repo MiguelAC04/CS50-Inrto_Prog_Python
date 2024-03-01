@@ -22,12 +22,12 @@ def main() -> None:
                 return False
 
         try:
-            assert assert_raises(   SyntaxError,
+            assert assert_raises(   err:=SyntaxError,
                                     calc_expr,
                                     'NOT AN OPERATION'
-                                ), 'Not expected exception raised'
-        except AssertionError as syn_err:
-            print('No SyntaxError raised:', syn_err)
+                                ), f'Not expected {err} raised'
+        except AssertionError as unexpected_err:
+            print(unexpected_err)
 
     value_test()
     exception_test()
