@@ -12,8 +12,13 @@ def main() -> None:
             print('\t',  err)
             raise
     def exception_test() -> None:
-        def asser_raises() -> None:
-            
+        def assert_raises(err, func, *args) -> None:
+            try:
+                func(args*)
+            except err:
+                raise
+
+
         try:
             assert_raises(SyntaxError, main, 'NOT AN OPERATION'),
             'Does not raise SyntaxError when invalid syntax is recieved'
