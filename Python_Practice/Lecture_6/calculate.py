@@ -31,7 +31,10 @@ intersection = lambda L1, L2: list(set(L1).intersection(L2))
 def evaluate(operation: str) -> int | float:
     '''Performs the given operaiton'''
     prep_op = operation.replace(',', '').replace('x', '*')
-    return eval(prep_op)
+    if not (evaluation:=eval(prep_op)):
+        return eval(prep_op)
+    else:
+        raise Exception
 
 
 def check_decimal(num: str) -> bool:
