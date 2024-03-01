@@ -12,9 +12,16 @@ def main() -> None:
             print('\t',  err)
             raise
     def exception_test() -> None:
+        def asser_raises() -> None:
+            
         try:
-            assert_raises(SyntaxError, main, 'NOT AN OPERATION')
-        
+            assert_raises(SyntaxError, main, 'NOT AN OPERATION'),
+            'Does not raise SyntaxError when invalid syntax is recieved'
+        except AssertionError as syn_err:
+            print(syn_err)
+    value_test()
+    exception_test()
+
 
 
 if __name__ == "__main__":
