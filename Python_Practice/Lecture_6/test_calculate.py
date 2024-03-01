@@ -2,9 +2,11 @@ from calculate import main as calc_expr
 
 
 def main() -> None:
+    global oper_1
     oper_1 = '13x13+23/2'
     print(oper_1, res_1 := eval(oper_1.replace('x', '*')))
     return res_1
+
 
 def value_test(res_1: int)-> None:
     try:
@@ -12,11 +14,12 @@ def value_test(res_1: int)-> None:
     except AssertionError as err:
         print('\t',  err)
 
-def exception_test(res_1: int) -> None:
-    def assert_raises(err, func, *args) -> None:
+
+def exception_test() -> None:
+    def assert_raises(expected_err, func, *args) -> None:
         try:
             func(args)
-        except err:
+        except expected_err:
             print('Error raised succesfuly')
             return True
         except Exception:
@@ -26,8 +29,8 @@ def exception_test(res_1: int) -> None:
                                 calc_expr,
                                 'NOT AN OPERATION'
                             ), f'Not expected {err} raised'
-        except AssertionError as unexpected_err:
-            print(unexpected_err)
+    except AssertionError as unexpected_err:
+        print(unexpected_err)
 
 
 
