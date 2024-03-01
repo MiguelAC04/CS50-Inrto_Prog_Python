@@ -23,8 +23,7 @@ def main() -> None:
                 return False
 
         try:
-            assert assert_raises(
-                                    SyntaxError,
+            assert assert_raises(   SyntaxError,
                                     calc_expr,
                                     'NOT AN OPERATION'
                                 ), 'Not expected exception raised'
