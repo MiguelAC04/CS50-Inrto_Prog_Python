@@ -6,22 +6,24 @@ print(oper_1, res_1 := eval(oper_1.replace('x', '*')))
 
 
 def test_values():
-    assert res_1+1 == (r:=calc_expr(oper_1))[1], f'{res_1} not equal to {r}'
-
+    assert res_1 == (r:=calc_expr(oper_1))[1], f'{res_1} not equal to {r}'
 
 
 def test_operator_exception():
     test, msg = raises(SyntaxError, calc_expr, '90¨¨30__12')
     assert test, msg
 
+
 def test_value_exeption():
     test, msg = raises(ValueError, calc_expr, '3xa+2x+2')
     assert test, msg
 
-def test_operator_combination():
-    assert not raises(calc_expr, '12/+1+3*-1')
 
-def raises(expected_err = None, func, *args):
+def test_operator_combination():
+    assert not raises(None, calc_expr, '12/+1+3*-1')
+
+
+def raises(expected_err, func, *args):
     if expected_err:
         try:
             func(*args)
