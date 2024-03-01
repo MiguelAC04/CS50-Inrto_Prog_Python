@@ -36,7 +36,7 @@ def check_decimal(num: str) -> bool:
     '''Checks whether numbers with decimal point or commas are valid'''
     match num.split('.', 1):
         case [int_part, decimal_part]:
-            if int_part > 3:
+            if len(int_part) > 3:
                 i = 0
                 for _ in int_part.count(','):
                     if not (j := int_part.find(',', i)) % 3:
