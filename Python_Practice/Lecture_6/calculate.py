@@ -9,7 +9,9 @@ except SyntaxError as err:
 '''
 
 
-def main(focus_oper: str = None) -> list[str, int] | None:
+def main(
+    focus_oper: str = None
+    ) -> list[str, int] | None:
     '''Main method that construct the process of evaluating an expression'''
     operation = input('Opperation>> ') if not focus_oper else focus_oper
     operators = ('+', '-', '*', '/', 'x')
