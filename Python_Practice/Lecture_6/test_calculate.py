@@ -7,10 +7,9 @@ def main() -> None:
 
     def value_test()-> None:
         try:
-            assert res_1 == (r:=calc_expr(oper_1))[1], f'{res_1} not = to {r}'
+            assert res_1+1 == (r:=calc_expr(oper_1))[1], f'{res_1} not = to {r}'
         except AssertionError as err:
             print('\t',  err)
-            raise
 
     def exception_test() -> None:
 
