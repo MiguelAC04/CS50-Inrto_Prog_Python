@@ -72,3 +72,4 @@ if __name__ == "__main__":
     match main():
         case [operation, result]:
             print(operation+' =', result)
+
