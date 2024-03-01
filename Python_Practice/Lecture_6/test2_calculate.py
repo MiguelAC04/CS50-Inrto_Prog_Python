@@ -20,7 +20,7 @@ def test_value_exeption():
 
 
 def test_operator_combination():
-    assert not raises(None, calc_expr, '12/+1+3*-1')
+    assert raises(None, calc_expr, '12/+1+3*-1')
 
 
 def raises(expected_err, func, *args):
@@ -37,6 +37,6 @@ def raises(expected_err, func, *args):
         try:
             func(*args)
         except Exception:
-            return True
-        else:
             return False
+        else:
+            return True
