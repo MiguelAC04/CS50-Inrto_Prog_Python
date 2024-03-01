@@ -19,9 +19,10 @@ def test_value_exeption():
     assert test, msg
 
 def test_operator_combination():
-    assert 
+    assert not raises(calc_expr, '12/+1+3*-1')
 
-def raises(expected_err, func, *args):
+def raises(expected_err = None, func, *args):
+    if expected_err:
         try:
             func(*args)
         except expected_err:
@@ -30,3 +31,10 @@ def raises(expected_err, func, *args):
             return False, 'Unexpected Error'
         else:
             return False, 'No error raised'
+    else:
+        try:
+            func(*args)
+        except Exception:
+            return True
+        else:
+            return False
