@@ -40,3 +40,5 @@ def raises(expected_err, func, *args):
             return False
         else:
             return True
+
+if __name__ == "__main__":
