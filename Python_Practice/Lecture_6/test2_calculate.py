@@ -1,5 +1,5 @@
 from calculate import main as calc_expr
-
+from pytest import raises as pytest_raises
 
 oper_1 = '13x13+23/2'
 print(oper_1, res_1 := eval(oper_1.replace('x', '*')))
@@ -20,7 +20,7 @@ def test_value_exeption():
     '''Tests 3'''
     # test, msg = raises(ValueError, calc_expr, '3xa+2x+2')
     # assert test, msg
-    with pytest.raises(ValueError):
+    with pytest_raises(SyntaxError):
         calc_expr('3xa+2x+2')
 
 
