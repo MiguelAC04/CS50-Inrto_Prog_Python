@@ -44,6 +44,6 @@ def raises(expected_err, func, *args):
             raise AssertionError
         else:
             return True
-def f():
-    print('\t\t\tTHIS FUNCTION WAS ALSO CALLED')
-    assert False
+def test_f():
+    print('\n\n\t\t\tTHIS FUNCTION WAS ALSO CALLED\n\n')
+    assert 
