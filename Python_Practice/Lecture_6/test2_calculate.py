@@ -18,8 +18,10 @@ def test_operator_exception():
 
 def test_value_exeption():
     '''Tests 3'''
-    test, msg = raises(ValueError, calc_expr, '3xa+2x+2')
-    assert test, msg
+    # test, msg = raises(ValueError, calc_expr, '3xa+2x+2')
+    # assert test, msg
+    with pytest.raises(ValueError):
+        calc_expr('3xa+2x+2')
 
 
 def test_operator_combination():
